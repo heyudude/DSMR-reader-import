@@ -7,7 +7,7 @@ The CSV file format can be used for other soures also, I included 2 examples
 # Background
 I started working on 2 existing scripts, python and windows scripting.
 Both have been at the root of my python script: why another one?
-Windows is not my thing ;) The python version is ok but it requires quite a bit of data ombutting. Both not optimal
+Windows is not my thing ;) The python version is ok but it requires quite a bit of data fiddling. Both not optimal
 
 # How does it work?
 - Reading in CSV structure,
