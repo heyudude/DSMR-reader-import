@@ -15,11 +15,11 @@ The steps:
     Export multimeter_calendar. and meter_calendar as CSV with a comma as separator
     Place the 2 files in the same directory as the python script: rename them or edit the script
     pip install pandas (takes care of the operations on the CSV files)
-    Adjust the APi key and the Index numbers of the Gas and electricity meters from Domoticz
+    Add your dsmreader APi key (enable the API) and the Index numbers of the Gas and electricity meters from Domoticz
     sudo supervisorctl stop dsm_backend and dsmr_datalogger
     Run the script
     sudo supervisorctl start all
-    ./manage.py dsmr_stats_reconstruct_missing_day_statistics (and prices envent)
+    ./manage.py dsmr_stats_reconstruct_missing_day_statistics (and prices also if needed)
 
 How does it work globally?
 Reading in CSV structure,
