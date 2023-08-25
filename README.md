@@ -1,5 +1,5 @@
 # DSMR-reader-import
-Import of records in CSV format from Domoticz to DSMR_reader or other sources.
+Import of records in CSV format from Domoticz to DSMR_reader (https://www.domoticz.com/wiki/Main_Page and https://github.com/dsmrreader) or other sources.
 
 Domoticz uses 2 tables one for the Gas meter readings, the other for the 4 counters from the Electricity.
 The CSV file format can be used for other soures also, I included 2 examples
