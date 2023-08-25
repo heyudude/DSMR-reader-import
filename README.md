@@ -11,15 +11,16 @@ Windows is not my thing ;) The python version is ok but it requires quite a bit 
 Disclaimer: I created and tested this on a temporary version of DSMR-Reader, I will do the real conversion only after checking that it is actually correct ;)
 The steps:
 
-    Export Domoticz Database
-    Export multimeter_calendar. and meter_calendar as CSV with a comma as separator
-    Place the 2 files in the same directory as the python script: rename them or edit the script
-    pip install pandas (takes care of the operations on the CSV files)
-    Add your dsmreader APi key (enable the API) and the Index numbers of the Gas and electricity meters from Domoticz
-    sudo supervisorctl stop dsm_backend and dsmr_datalogger
-    Run the script
-    sudo supervisorctl start all
-    ./manage.py dsmr_stats_reconstruct_missing_day_statistics (and prices also if needed)
+    1. Export Domoticz Database (via backup database)
+    2. Export multimeter_calendar. and meter_calendar as CSV with a comma as separator
+    3. Place the 2 files in the same directory as the python script: rename them or edit the script
+    4. pip install pandas (takes care of the operations on the CSV files)
+    5. Add your dsmreader APi key (enable the API) and the Index numbers of the Gas and electricity meters from Domoticz
+    6. sudo supervisorctl stop dsm_backend and dsmr_datalogger
+    7. Run the script
+    8. sudo supervisorctl start all
+    9. ./manage.py dsmr_stats_reconstruct_missing_day_statistics (and prices also if needed)
+    10. check the data you imported, just to be sure
 
 How does it work globally?
 Reading in CSV structure,
@@ -30,4 +31,3 @@ import via the API
 
 Try it first with 1 date and then everything else
 
-The script:
