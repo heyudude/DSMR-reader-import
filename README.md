@@ -23,11 +23,11 @@ The steps:
     10. check the data you imported, just to be sure
 
 How does it work globally?
-Reading in CSV structure,
-filter on the right 2 indexes
-Remove redundant columns
-Merge electricity and gas measurements
-import via the API
+- Reading in CSV structure,
+- filter on the 2 indexes for the meters
+- Remove redundant columns
+- Merge electricity and gas measurements
+- import via the API
 
 Try it first with 1 date and then everything else
 
