@@ -19,8 +19,7 @@ Windows is not my thing ;) The python version is ok but it requires quite a bit 
 Try it first with 1 date and then everything else
 
 # The steps
-Disclaimer: I created and tested this on a temporary version of DSMR-Reader, I will do the real conversion only after checking that it is actually correct ;)
-The steps:
+Disclaimer: Although it worked out perfectly, please use a test setup or try it out first with a limited set of data ;)
 
     1. Export Domoticz Database (via backup database)
     2. Export multimeter_calendar. and meter_calendar as CSV with a comma as separator
