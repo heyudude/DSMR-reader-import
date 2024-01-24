@@ -16,8 +16,8 @@ idxGasMeter = int(2)
 
 #csvMulti = pd.read_csv('multimeter_calender.csv') # electra
 #csvMeter = pd.read_csv('meter_calender.csv') # Gas
-csvMulti = pd.read_csv('mu.csv') # electra
-csvMeter = pd.read_csv('me.csv') # Gas
+csvMulti = pd.read_csv(filenameEnergyMeter) # electra
+csvMeter = pd.read_csv(filenameGasMeter) # Gas
 
 def init_data():
   # filter the IDX for Electra and Gas
