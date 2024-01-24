@@ -7,14 +7,21 @@ import json
 import datetime
 
 APIKey = '*API*'
+dmsrHost = 'url to your dmsr-reader instance including port'
+filenameEnergyMeter = 'MultiMeter_Calendar.csv'
+idxEnergyMeter = int(1)
+
+filenameGasMeter = 'Meter_Calendar.csv'
+idxGasMeter = int(2)
+
 #csvMulti = pd.read_csv('multimeter_calender.csv') # electra
 #csvMeter = pd.read_csv('meter_calender.csv') # Gas
 csvMulti = pd.read_csv('mu.csv') # electra
 csvMeter = pd.read_csv('me.csv') # Gas
 
 def init_data():
-  # filter the IDX for Electra and Gas (in this case 91 and 107 from Domoticz)
-  fcsvMulti = csvMulti.loc[csvMulti['DeviceRowID'].isin([91])]
+  # filter the IDX for Electra and Gas
+  fcsvMulti = csvMulti.loc[csvMulti['DeviceRowID'].isin([idxEnergyMeter])]
   del fcsvMulti['DeviceRowID']
   del fcsvMulti['Value1']
   del fcsvMulti['Value2']
@@ -24,7 +31,7 @@ def init_data():
   del fcsvMulti['Value6']
   #print('Filtered Electra list:', fcsvMulti)
 
-  fcsvMeter = csvMeter.loc[csvMeter['DeviceRowID'].isin([107])]
+  fcsvMeter = csvMeter.loc[csvMeter['DeviceRowID'].isin([idxGasMeter])]
   del fcsvMeter['DeviceRowID']
   del fcsvMeter['Value']
   #print("Filtered Gas list:", fcsvMeter)
@@ -35,7 +42,7 @@ def init_data():
 
 def write_response(timestamp):
     response = requests.post(
-      'http://192.168.2.15/api/v2/datalogger/dsmrreading',
+      dmsrHost + '/api/v2/datalogger/dsmrreading',
          headers={'X-AUTHKEY': APIKey},
      data={
        'electricity_currently_delivered': 0.000,
@@ -75,3 +82,4 @@ for index, row in csvData.iterrows():
    write_response(timestamp)
 
 # EOF
+
