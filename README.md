@@ -3,6 +3,7 @@ Import of records in CSV format from Domoticz to DSMR_reader (https://www.domoti
 
 Domoticz uses 2 tables one for the Gas meter readings, the other for the 4 counters from the Electricity.
 The CSV file format can be used for other soures also, I included 2 examples
+And add extra meter readings to DSMR 
 
 # Background
 I started working on 2 existing scripts, python and windows scripting.
@@ -10,7 +11,7 @@ Both have been at the root of my python script: why another one?
 Windows is not my thing ;) The python version is ok but it requires quite a bit of data fiddling. Both not optimal
 
 # How does it work?
-- Reading in CSV structure,
+- Read in CSV structure,
 - filter on the 2 indexes for the meters
 - Remove redundant columns
 - Merge electricity and gas measurements
