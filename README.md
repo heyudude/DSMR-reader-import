@@ -7,11 +7,11 @@ And add extra meter readings to DSMR
 
 # Background
 I started working on 2 existing scripts, python and windows scripting.
-Both have been at the root of my python script: why another one?
+Both sources I used in my python version of the  script: why another one?
 Windows is not my thing ;) The python version is ok but it requires quite a bit of data fiddling. Both not optimal
 
 # How does it work?
-- Read in CSV structure,
+- Read CSV structure,
 - filter on the 2 indexes for the meters
 - Remove redundant columns
 - Merge electricity and gas measurements
